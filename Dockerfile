@@ -1,7 +1,7 @@
 # select operating system
-FROM trivadis/apache-spark-base:2.4.5-hadoop2.8
+FROM trivadis/apache-spark-base:2.4.7-hadoop2.8
 
-ENV LIVY_VERSION=0.6.0-incubating
+ENV LIVY_VERSION=0.7.0-incubating
 
 # install operating system packages (software-properties-common, dnsutils)
 RUN apk update && apk upgrade && apk add --no-cache git curl gettext unzip wget make nmap bind-tools
