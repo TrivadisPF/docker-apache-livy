@@ -1,7 +1,7 @@
 # select operating system
 FROM trivadis/apache-spark-base:3.0.1-hadoop3.2
 
-ENV LIVY_VERSION=0.7.0-incubating
+ENV LIVY_VERSION=0.7.1-incubating
 
 # install operating system packages (software-properties-common, dnsutils)
 RUN apk update && apk upgrade && apk add --no-cache git curl gettext unzip wget make nmap bind-tools
@@ -31,7 +31,7 @@ RUN mkdir /var/apache-spark-binaries/
 
 # binaries
 # apache livy
-RUN wget http://mirror.23media.de/apache/incubator/livy/${LIVY_VERSION}/apache-livy-${LIVY_VERSION}-bin.zip -O /tmp/livy.zip
+RUN wget https://dlcdn.apache.org/incubator/livy/${LIVY_VERSION}/apache-livy-${LIVY_VERSION}-bin.zip -O /tmp/livy.zip
 RUN unzip /tmp/livy.zip -d /opt/
 RUN mv /opt/apache-livy-${LIVY_VERSION}-bin /opt/apache-livy-bin
 
