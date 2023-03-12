@@ -1,5 +1,5 @@
 # select operating system
-FROM trivadis/apache-spark-base:3.2.0-hadoop3.2
+FROM trivadis/apache-spark-base:3.2.3-hadoop3.3
 
 ENV LIVY_VERSION=0.7.1-incubating
 
